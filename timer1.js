@@ -4,7 +4,7 @@ const alarmClock = function() {
 };
 
 const schedule = function(delay) {
-  if (!isNaN(Number(delay))) {
+  if (!isNaN(Number(delay)) && !(delay < 0)) {
     setTimeout(() => {
       alarmClock();
     }, delay * 1000);
