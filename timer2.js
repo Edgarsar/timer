@@ -12,10 +12,14 @@ stdin.on('data', (key) => {
 
   }
   if (key === '\u0003') {
+    console.log(`
+    Thanks for using me, ciao!`)
     process.exit();
   }
   for (const n of num) {
     if (key === n) {
+      console.log(`
+      setting timer for ${n} seconds...`)
     setTimeout(() => {
       process.stdout.write('.');
     }, n * 1000);
